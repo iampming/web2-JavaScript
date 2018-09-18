@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h3>객체 coworkers 데이터</h3>
+    <script>
+      var coworkers = {
+        "programmer":"egoing",
+        "designer":"leezche"
+      };
+
+      coworkers.bookkeeper = "duru";
+      coworkers["data scientist"] = "taeho";
+
+      document.write(coworkers.programmer+"<br>");
+      document.write(coworkers.designer+"<br>");
+      document.write(coworkers.bookkeeper+"<br>");
+      document.write(coworkers["data scientist"]+"<br>");
+    </script>
+    <h3>Javascript object iterate (get value)</h3>
+    <script>
+      for(var key in coworkers) {
+        document.write(coworkers[key]+'<br>');
+      }
+    </script>
+    <h3>Property & Method</h3>
+    <script>
+      coworkers.showAll = function () {
+        for (var key in this) {
+          document.write(this[key]+"<br>")
+        }
+      };
+    coworkers.showAll();
+    </script>
+  </body>
+</html>
